@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+#account{
+color:blue;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body background="bg.jpg" width="600" height="600">
+	<br><br><br><br>
+  <marquee style="color:yellow" direction="right"><h2>Welcome To Purchasing Management System<h2></marquee>
+  <form name="myform" method="post" onsubmit="return validateform()" > 
+    <center>
+       <table border='1'  style="background-color:#FFFFF0;" >
+               <tr><td><h2><b>Login to your account</b></h2></td></tr>
+                <tr><td><l>
+                	<label for="uname"><b>Username</b></label>
+      				    <input type="text" placeholder="Enter Username" name="name">
+				        </l></td></tr>
+                <tr><td><l1> 
+                	<label for="psw"><b>Password</b></label>
+      				      <input type="password" placeholder="Enter Password" name="password" ></l1></td></tr>
+                <tr><td><b3><input type="checkbox" >I Agree</b3><br></td></tr>
+
+                <tr><td><button type="submit">Login</button></td></tr>
+                <tr><td><button><a href="registration_form.html" target="_blank">SignUp</a></button></td></tr>
+                <tr><td><button><a href="forget.html" target="Proj_login.html">Forgot Password</a></button></td></tr>
+         </table>
+      </center> 
+  </form> 
+
+<script>  
+  function validateform(){  
+  var name=document.myform.name.value;  
+  var password=document.myform.password.value;  
+    
+  if (name==null || name==""){  
+    alert("Username can't be blank");  
+    return false;  
+  }else if(password.length<6){  
+    alert("Password must be at least 6 characters long.");  
+    return false;  
+    }  
+  }  
+  </script>  
+</body>
+</html>

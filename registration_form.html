@@ -1,0 +1,60 @@
+<html>
+<head>
+       <title>Registration Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">  
+<style>
+ tr{
+    color:#FF0000;
+   }
+</style>
+
+</head>
+
+<body background="bg.jpg" width="600" height="600">
+
+  <marquee style="color:yellow" direction="right"><h2>Welcome To Purchasing Management System<h2></marquee>
+
+     <form  align="center" name="myform" onsubmit="return validateform()">
+        <center border='1' >
+          <table  border='1' style="background-color:AliceBlue">
+               <tr><td><b><i><big>Registration Form</big></i></b><br><br></td></tr>
+             
+               <tr><td>FIRST NAME:<input type="text" placeholder="first name" name="fname" required></td></tr>
+               <tr><td>LAST NAME:<input type="text" placeholder="last name" name="lname" required></td></tr>
+               <tr><td>EMAIL :<input type="email" placeholder="email" name="mail" required ><br><br></td></tr>
+               <tr><td>D.O.B :<input type="date" ><br><br></td></tr>
+               <tr><td>MOBILE NO :<input type="text" placeholder="mobile no." name="m_no"></td></tr>     
+               <tr><td><label>AGE:</label><input type="number" value="0" value!="-1"></td></tr>
+
+               <tr><td>GENDER :<br>
+                                <input type="radio" name="gender" required>Male<br>
+                                <input type="radio" name="gender" required>Female<br>
+                                <input type="radio" name="gender" required>Other<br> 
+                  <br></td></tr>
+
+                  <tr><td>ADDRESS :<textarea row="3" col="3" ></textarea></td></tr>
+                  <tr><td><input type="checkbox" required>I Agree<br></td></tr>
+                  <tr><td><button type="submit">Register</button></td></tr>         
+            </table>
+        </center>
+  </form>
+
+  <script>
+  function validateform()
+  {
+    var fn = document.myform.fname.value;
+    var ln = document.myform.lname.value;
+    if (fn == null || fn = "")
+      {
+        alert("First name cannot be empty!!");
+        return false;
+      }
+      else if(ln= "null" || ln="")
+      {
+        alert("Last name cannot be empty!!");
+        return false;
+      }
+  }
+</script>
+</body>
+</html>
